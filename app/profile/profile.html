@@ -1,0 +1,20 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <div class="row">
+    <div class="btn btn-primary" ngf-select ng-model="file" ngf-pattern="'image/*'" accept="image/*" ngf-accept="'image/*'" ngf-max-size="5MB" ngf-min-height="200"
+    ngf-resize="{width: 200, height: 200 , quality: .9 }">
+      Upload Image
+    </div>
+
+    <img src="{{user.image}}" ng-show="user.image" alt="" />
+  </div>
+
+  <div class="row">
+    <input type="text" class="form-control" ng-model="user.username" ng-blur="updateUsername()">
+  </div>
+
+  <div class="row">
+    <textarea name="name" class="form-control"  ng-model="user.bio" ng-blur="updateBio()">
+
+    </textarea>
+  </div>
+</div>
